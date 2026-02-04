@@ -21,12 +21,17 @@
 }
 
 /* Layout: garantir que o footer fique no final da página */
-html, body { height: 100%; }
+html,
+body {
+    height: 100%;
+}
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
+
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -37,7 +42,9 @@ body {
 }
 
 /* main deve crescer para empurrar o footer para baixo */
-.site__main { flex: 1 0 auto; }
+.site__main {
+    flex: 1 0 auto;
+}
 
 /* Base */
 

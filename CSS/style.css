@@ -93,6 +93,14 @@ body {
     display: inline-block;
 }
 
+.nav__icons { display: inline-flex; gap: .4rem; align-items: center; }
+
+/* otimização visual para ícones rasterizados */
+.nav__icon[src$=".png"] { image-rendering: -webkit-optimize-contrast; }
+
+/* hover */
+.nav__link:hover .nav__icon { filter: brightness(0.6); }
+
 .hero {
     padding: 2rem 0;
     text-align: center;

@@ -14,7 +14,7 @@
 */
 
 :root {
-    --max-width: 1100px;
+    --max-width: 1400px; /* aumentado para uma área de conteúdo mais larga */
     --gap: 1rem;
     --brand: #0b5fff;
     --muted: #6b6b6b;
@@ -33,12 +33,21 @@ body {
 }
 
 .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 1rem;
+    width: 100%;            /* ocupar toda a largura da viewport */
+    max-width: none;        /* desliga o limite do container */
+    margin: 0;              /* remover centralização forçada */
+    padding: 1.5rem 2rem;   /* mais espaço lateral */
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
+    background: transparent; /* permite que o fundo da página apareça */
+}
+
+/* wrapper opcional para centralizar o conteúdo dentro do container */
+.container__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* main deve crescer para empurrar o footer para baixo */
